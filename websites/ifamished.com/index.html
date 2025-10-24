@@ -5,23 +5,59 @@
   <title>iFamished — Minecraft Modder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      color-scheme: dark light;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Work Sans', sans-serif;
-      color: #f0f0f0;
+      font-family: 'Inter', sans-serif;
       background-color: #111;
-      transition: background-color 0.5s ease, color 0.5s ease;
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    .page-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../assets/images/backgrounds/desert_day.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -3;
+      transition: background-image 0.5s ease;
+    }
+
+    .page-gradient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to top, #00000088 0%, #00000022 100%);
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
     }
 
     .profile-box {
       max-width: 720px;
-      margin: 120px auto 60px;
+      margin: 140px auto 60px;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid #fff;
       border-radius: 20px;
-      padding: 30px;
+      padding: 32px;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(12px);
       animation: fadeIn 1s ease-out;
@@ -33,9 +69,9 @@
     }
 
     .profile-box h1 {
-      font-size: 32px;
-      margin-bottom: 16px;
-      color: #00ffcc;
+      font-size: 36px;
+      margin-bottom: 18px;
+      color: #00f7c2;
     }
 
     .profile-box p {
@@ -49,13 +85,13 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 10px;
+      margin-top: 20px;
     }
 
     .links a {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       background: #962F30;
       color: #fff;
       text-decoration: none;
@@ -71,34 +107,10 @@
       transform: scale(1.05);
     }
 
-    .links i {
-      font-size: 16px;
-    }
-
-    /* Background layers from darkmode.html */
-    .page-bg, .page-gradient {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-    }
-    .page-bg {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: -2;
-      transition: background-image 0.4s ease;
-    }
-    .page-gradient {
-      background-image: linear-gradient(to top, #0000004F 0%, #0000001A 100%);
-      transition: opacity 0.4s ease;
-      opacity: 1;
-    }
-    body.darkmode .page-gradient {
-      opacity: 0;
+    .links img.icon {
+      height: 18px;
+      width: 18px;
+      filter: brightness(0) invert(1);
     }
   </style>
 </head>
@@ -106,6 +118,7 @@
   <!-- Background layers -->
   <div class="page-bg"></div>
   <div class="page-gradient"></div>
+  <canvas id="particles"></canvas>
 
   <!-- Inject global header and darkmode -->
   <script>
@@ -140,10 +153,29 @@
       <a href="https://discord.com/users/1385818506259464284/" target="_blank"><i class="fab fa-discord"></i> Discord</a>
       <a href="mailto:me@ifamished.com"><i class="fas fa-envelope"></i> Email</a>
       <a href="https://github.com/iFamished" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://modrinth.com/user/iFamished/" target="_blank"><i class="fas fa-cube"></i> Modrinth</a>
+      <a href="https://modrinth.com/user/iFamished/" target="_blank">
+        <img src="https://cdn.modrinth.com/modrinth-new.png" alt="Modrinth" class="icon" /> Modrinth
+      </a>
       <a href="https://optifineforfabric.com" target="_blank"><i class="fas fa-bolt"></i> Optifine for Fabric</a>
       <a href="https://hungersmp.com" target="_blank"><i class="fas fa-server"></i> Hunger SMP</a>
     </div>
   </div>
+
+  <!-- Particle animation -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("particles", {
+      fullScreen: { enable: true, zIndex: -1 },
+      particles: {
+        number: { value: 60 },
+        color: { value: "#ffffff" },
+        opacity: { value: 0.2 },
+        size: { value: 2 },
+        move: { enable: true, speed: 0.3 },
+        links: { enable: true, distance: 100, color: "#ffffff", opacity: 0.1 }
+      },
+      background: { color: "transparent" }
+    });
+  </script>
 </body>
 </html>
