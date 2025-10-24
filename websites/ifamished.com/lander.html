@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>iFamished — Minecraft Modder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Work Sans', sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+      color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-box {
+      max-width: 720px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .profile-box h1 {
+      font-size: 32px;
+      margin-bottom: 16px;
+      color: #00ffcc;
+    }
+
+    .profile-box p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #962F30;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .links a:hover {
+      background: #b84a4c;
+      transform: scale(1.05);
+    }
+
+    .links i {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-box">
+    <h1>Hey, I'm iFamished 👋</h1>
+    <p>
+      I mod Minecraft — from custom modpacks to smooth Vanilla+ enhancements, I thrive on testing the limits of the game. My biggest creation is <strong>Optifine for Fabric</strong>, the leading alternative to Optifine for modern Fabric versions. It’s fast, compatible, and built for performance.
+    </p>
+    <p>
+      I also run <strong>The Hunger SMP</strong>, a semi-anarchy Minecraft server where chaos meets creativity. If you’re into wild survival, unpredictable alliances, and no hand-holding, you’ll feel right at home.
+    </p>
+    <p>
+      When I’m not coding or managing servers, you’ll probably find me playing Bedwars on Hypixel, clutching 1v4s or god bridging like my life depends on it.
+    </p>
+    <p>
+      Want to collaborate, join the server, or just chat Minecraft? Reach out or check out the links below — I’m always down to connect.
+    </p>
+    <div class="links">
+      <a href="https://discord.com/users/1385818506259464284/" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+      <a href="mailto:me@ifamished.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://github.com/iFamished" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://modrinth.com/user/iFamished/" target="_blank"><i class="fas fa-cube"></i> Modrinth</a>
+      <a href="https://optifineforfabric.com" target="_blank"><i class="fas fa-bolt"></i> Optifine for Fabric</a>
+      <a href="https://hungersmp.com" target="_blank"><i class="fas fa-server"></i> Hunger SMP</a>
+    </div>
+  </div>
+</body>
+</html>
