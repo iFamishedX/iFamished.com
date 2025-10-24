@@ -12,52 +12,145 @@
   <meta property="og:description" content="iFamished's projects." />
 
   <!-- Fonts + Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Moderustic:ital,wght@0,400;0,500;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
 
-  <!-- Inlined CSS from Pastebin -->
   <style>
-    @import url('https://pastebin.com/raw/VLbHxveg');
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Source Sans 3', sans-serif;
+      color: black;
+      transition: color 0.4s ease;
+    }
+    body.darkmode {
+      color: white;
+    }
+
+    .site-wrapper {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .text-component {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .buttons-component {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .buttons-component li a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      background: #eee;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      color: inherit;
+      transition: background 0.2s ease;
+    }
+
+    .buttons-component li a:hover {
+      background: #ddd;
+    }
+
+    .page-bg,
+    .page-gradient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .page-bg {
+      background-image: url('https://i.imgur.com/wBnMmPG.png');
+      transition: background-image 0.4s ease;
+    }
+
+    .page-gradient {
+      background-image: linear-gradient(to top, #0000004F 0%, #0000001A 100%);
+      pointer-events: none;
+    }
+
+    body.darkmode .page-bg {
+      background-image: url('https://i.imgur.com/nEJsbFT.png');
+    }
+
+    body.darkmode .page-gradient {
+      display: none;
+    }
+
+    .toggle-bg {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: black;
+      color: white;
+      border: none;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    body.darkmode .toggle-bg {
+      background: white;
+      color: black;
+    }
+
+    .toggle-bg.animate-in {
+      animation: sweepIn 0.4s ease forwards;
+    }
+
+    @keyframes sweepIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body class="is-loading">
   <div id="global-header"></div>
 
   <div class="site-wrapper">
-    <div class="site-main">
-      <div class="inner">
-        <div id="container02" class="container-component instance-2 default">
-          <div class="wrapper">
-            <div class="inner">
-              <h1 id="text02" class="text-component instance-2 style-1">About Me</h1>
-              <p id="text05" class="text-component instance-5 style-2">
-                <span class="p">I'm iFamished! I mod Minecraft — from custom modpacks to smooth Vanilla+ enhancements, I thrive on testing the limits of the game. My biggest creation is Optifine for Fabric, the leading alternative to Optifine for modern Fabric versions. It’s fast, compatible, and built for performance.</span>
-                <span class="p">I also run The Hunger SMP, a semi-anarchy Minecraft server where chaos meets creativity. If you’re into wild survival, unpredictable alliances, and no hand-holding, you’ll feel right at home.</span>
-                <span class="p">When I’m not coding or managing servers, you’ll probably find me playing Bedwars on Hypixel, clutching 1v4s or god bridging like my life depends on it.</span>
-                <span class="p">Want to collaborate, join the server, or just chat Minecraft? Reach out or check out the website — I’m always down to connect.</span>
-              </p>
-            </div>
-          </div>
-        </div>
+    <h1 class="text-component">About Me</h1>
+    <p class="text-component">I'm iFamished! I mod Minecraft — from custom modpacks to smooth Vanilla+ enhancements, I thrive on testing the limits of the game. My biggest creation is Optifine for Fabric, the leading alternative to Optifine for modern Fabric versions. It’s fast, compatible, and built for performance.</p>
+    <p class="text-component">I also run The Hunger SMP, a semi-anarchy Minecraft server where chaos meets creativity. If you’re into wild survival, unpredictable alliances, and no hand-holding, you’ll feel right at home.</p>
+    <p class="text-component">When I’m not coding or managing servers, you’ll probably find me playing Bedwars on Hypixel, clutching 1v4s or god bridging like my life depends on it.</p>
+    <p class="text-component">Want to collaborate, join the server, or just chat Minecraft? Reach out or check out the website — I’m always down to connect.</p>
 
-        <div id="container01" class="container-component instance-1 default">
-          <div class="wrapper">
-            <div class="inner">
-              <ul id="buttons01" class="buttons-component instance-1 style-1">
-                <li><a href="https://discord.com/users/1385818506259464284/" target="_blank" class="n01" role="button"><svg><use xlink:href="assets/icons.svg#discord"></use></svg><span class="label">DM me on Discord</span></a></li>
-                <li><a href="mailto:me@ifamished.com" class="n02" role="button"><svg><use xlink:href="assets/icons.svg#email"></use></svg><span class="label">Email me</span></a></li>
-                <li><a href="https://github.com/iFamished" class="n03" role="button"><svg><use xlink:href="assets/icons.svg#github"></use></svg><span class="label">Check out my Github</span></a></li>
-                <li><a href="https://modrinth.com/user/iFamished/" target="_blank" class="n04" role="button"><svg><use xlink:href="assets/icons.svg#modrinth"></use></svg><span class="label">Find me on Modrinth</span></a></li>
-                <li><a href="#" class="n05" role="button"><svg><use xlink:href="assets/icons.svg#download"></use></svg><span class="label">Download Optifine for Fabric</span></a></li>
-                <li><a href="https://hungersmp.com" class="n06" role="button"><svg><use xlink:href="assets/icons.svg#globe"></use></svg><span class="label">Join The Hunger SMP</span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ul class="buttons-component">
+      <li><a href="https://discord.com/users/1385818506259464284/" target="_blank"><i class="fa-brands fa-discord"></i><span>DM me on Discord</span></a></li>
+      <li><a href="mailto:me@ifamished.com"><i class="fa-solid fa-envelope"></i><span>Email me</span></a></li>
+      <li><a href="https://github.com/iFamished"><i class="fa-brands fa-github"></i><span>Check out my Github</span></a></li>
+      <li><a href="https://modrinth.com/user/iFamished/" target="_blank"><i class="fa-solid fa-cube"></i><span>Find me on Modrinth</span></a></li>
+      <li><a href="#"><i class="fa-solid fa-download"></i><span>Download Optifine for Fabric</span></a></li>
+      <li><a href="https://hungersmp.com"><i class="fa-solid fa-globe"></i><span>Join The Hunger SMP</span></a></li>
+    </ul>
   </div>
 
   <div class="page-bg"></div>
@@ -65,7 +158,50 @@
 
   <button class="toggle-bg" id="modeToggle"><i class="fa-solid fa-moon"></i></button>
 
-  <!-- Inlined JS from Pastebin -->
-  <script src="https://pastebin.com/raw/Lqcxwyff"></script>
+  <script>
+    const referrer = document.referrer;
+    const fadeDomains = [
+      "optifineforfabric.com",
+      "ifamished.com",
+      "hungersmp.com",
+      "changelogs.optifineforfabric.com",
+      "download.optifineforfabric.com"
+    ];
+
+    const shouldFadeOnly = fadeDomains.some(domain => referrer.includes(domain));
+
+    fetch("https://raw.githubusercontent.com/iFamishedX/Website-Files/main/global_header.html")
+      .then(res => res.text())
+      .then(html => {
+        const headerContainer = document.getElementById("global-header");
+        headerContainer.innerHTML = html;
+
+        const header = headerContainer.querySelector(".sticky-header");
+        if (header && shouldFadeOnly) {
+          header.classList.add("fade-only");
+        }
+      });
+
+    const toggleBtn = document.getElementById("modeToggle");
+    const body = document.body;
+
+    const isDarkMode = localStorage.getItem("darkmode") === "true";
+    if (isDarkMode) {
+      body.classList.add("darkmode");
+      toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
+
+    setTimeout(() => {
+      toggleBtn.classList.add("animate-in");
+    }, 250);
+
+    toggleBtn.addEventListener("click", () => {
+      const dark = body.classList.toggle("darkmode");
+      localStorage.setItem("darkmode", dark);
+      toggleBtn.innerHTML = dark
+        ? '<i class="fa-solid fa-sun"></i>'
+        : '<i class="fa-solid fa-moon"></i>';
+    });
+  </script>
 </body>
 </html>
