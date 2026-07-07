@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom"
 
 // Shared UI package styles
 import "ifamished-ui/styles/index.css"
-import "ifamished-ui/styles/themes/solid/violet.css"
+import "ifamished-ui/styles/themes/fire/ember.css"
 
 // Site-specific background styles
 import "./styles/background.css"
