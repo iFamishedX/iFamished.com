@@ -34,7 +34,9 @@ const projects = [
       "A fast, modern string mapping Python library designed with scalability in mind.",
     stack: ["Python", "Utility"],
     features: [
-      "Optimized for speed and low memory usage"
+      "Optimized for speed and low memory usage",
+      "Highly intuitive API for string mapping and transformation",
+      "Supports large datamaps and complex mapping scenarios",
     ],
     github: "https://github.com/iFamishedX/mapres",
     pypi: "https://pypi.org/project/mapres/",
@@ -47,7 +49,7 @@ const projects = [
     features: [
       "Performance enhancements",
       "Visual improvements",
-      "Shader support (where applicable)",
+      "Shader support",
     ],
     github: "https://github.com/iFamishedX/optifine-for-fabric",
     modrinth: "https://modrinth.com/project/optifine-for-fabric",
