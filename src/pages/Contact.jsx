@@ -38,6 +38,12 @@ const links = [
     icon: <Icon name="website" size={22} />,
   },
   {
+    label: "hungernet.dev",
+    href: "https://hungernet.dev",
+    description: "A unified utility ecosystem.",
+    icon: <Icon name="website" size={22} />,
+  },
+  {
     label: "optifineforfabric.com",
     href: "https://optifineforfabric.com",
     description: "Home of OptiFine for Fabric.",
