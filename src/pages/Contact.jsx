@@ -15,7 +15,7 @@ const links = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/iFamishedX",
+    href: "https://github.com/iFamished",
     description: "Source code, experiments, and backend tooling.",
     icon: <Icon name="github" size={22} />,
   },

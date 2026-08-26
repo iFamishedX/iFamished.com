@@ -14,7 +14,7 @@ const navItems = [
 ]
 
 const socials = [
-  { label: "GitHub", href: "https://github.com/iFamishedX" },
+  { label: "GitHub", href: "https://github.com/iFamished" },
   { label: "Modrinth", href: "https://modrinth.com/user/iFamished" },
   { label: "Discord", href: "https://discord.com/users/iFamished" },
 ]

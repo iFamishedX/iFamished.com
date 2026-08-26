@@ -13,7 +13,7 @@
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.18.0",
-    "ifamished-ui": "github:iFamishedX/iFamished-UI"
+    "ifamished-ui": "github:iFamished/iFamished-UI"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.42.1",

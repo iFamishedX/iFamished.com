@@ -11,7 +11,7 @@ const projects = [
       "Zero-noise, automation-focused design",
       "Ideal for dashboards and remote control",
     ],
-    github: "https://github.com/iFamishedX/HungerBridge",
+    github: "https://github.com/iFamished/HungerBridge",
     modrinth: "https://modrinth.com/project/hungerbridge",
   },
   {
@@ -25,7 +25,7 @@ const projects = [
       "Clean API and codebase, ideal for automation and scripting",
       "Lightweight and easy to integrate",
     ],
-    github: "https://github.com/iFamishedX/HungerLib",
+    github: "https://github.com/iFamished/HungerLib",
     pypi: "https://pypi.org/project/hungerlib/",
   },
   {
@@ -38,7 +38,7 @@ const projects = [
       "Highly intuitive API for string mapping and transformation",
       "Supports large datamaps and complex mapping scenarios",
     ],
-    github: "https://github.com/iFamishedX/mapres",
+    github: "https://github.com/iFamished/mapres",
     pypi: "https://pypi.org/project/mapres/",
   },
   {
@@ -51,7 +51,7 @@ const projects = [
       "Visual improvements",
       "Shader support",
     ],
-    github: "https://github.com/iFamishedX/optifine-for-fabric",
+    github: "https://github.com/iFamished/optifine-for-fabric",
     modrinth: "https://modrinth.com/project/optifine-for-fabric",
   },
   {
