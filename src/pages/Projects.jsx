@@ -106,8 +106,7 @@ const projects = [
       "Unique modset",
       "New startup Minecraft server",
     ],
-    owner: "3rd Party",
-    status: "NEW",
+    status: "3RD PARTY",
     website: "https://hungernet.dev",
   },
 ]
