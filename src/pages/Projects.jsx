@@ -4,7 +4,7 @@ const projects = [
     {
     name: "HungerNet",
     description:
-      "My ecosystem! The one-stop place for all of my work, alongside other developers'.",
+      "My ecosystem! A central hub that connects all of my infrastructure, tools, libraries, and community projects. Also includes other HungerNet members' works.",
     stack: ["Minecraft", "Discord"],
     features: [
       "Secure /run, /log, /ping endpoints",
