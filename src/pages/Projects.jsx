@@ -19,7 +19,7 @@ const projects = [
     name: "HungerBridge",
     description:
       "A lightweight multiloader HTTP bridge for Minecraft servers. Provides secure run, log, and ping endpoints for automation, dashboards, and remote control.",
-    stack: ["Fabric", "Paper", "Purpur", "Quilt", "Folia"],
+    stack: ["Fabric", "Paper", "Purpur", "Folia"],
     features: [
       "Secure /run, /log, /ping endpoints",
       "Zero-noise, automation-focused design",
