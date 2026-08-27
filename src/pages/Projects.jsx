@@ -7,9 +7,10 @@ const projects = [
       "My ecosystem! A central hub that connects all of my infrastructure, tools, libraries, and community projects. Also includes other HungerNet members' works.",
     stack: ["Minecraft", "Discord"],
     features: [
-      "Secure /run, /log, /ping endpoints",
-      "Zero-noise, automation-focused design",
-      "Ideal for dashboards and remote control",
+      "Unified source for everything HungerNet",
+      "UX in mind",
+      "Scalable architecture",
+      "Zero-noise design",
     ],
     status: "EVOLVING",
     website: "https://hungernet.dev",
@@ -94,6 +95,20 @@ const projects = [
     status: "NEW",
     github: "https://github.com/iFamished/C2E",
     pypi: "https://pypi.org/project/C2E/",
+  },
+  {
+    name: "Nerfed SMP",
+    description:
+      "Assisting in the moderation and development of Nerfed SMP",
+    stack: ["Minecraft", "Discord"],
+    features: [
+      "Powered by SparkedHost",
+      "Unique modset",
+      "New startup Minecraft server",
+    ],
+    owner: "3rd Party",
+    status: "NEW",
+    website: "https://hungernet.dev",
   },
 ]
 
