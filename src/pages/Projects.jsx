@@ -11,6 +11,7 @@ const projects = [
       "Zero-noise, automation-focused design",
       "Ideal for dashboards and remote control",
     ],
+    status: "INDEV",
     github: "https://github.com/iFamished/HungerBridge",
     modrinth: "https://modrinth.com/project/hungerbridge",
   },
@@ -67,6 +68,20 @@ const projects = [
     website: "https://hungersmp.com/",
     modrinth: "https://modrinth.com/server/the-hunger-smp",
   },
+  {
+    name: "C2E",
+    description:
+      "Console Command Engine: A powerful Python library for console-based commands.",
+    stack: ["Python", "Library", "Utility"],
+    features: [
+      "Built for readability",
+      "Works on Pterodactyl panels",
+      "Lightweight and easy to integrate",
+    ],
+    status: "NEW",
+    github: "https://github.com/iFamished/C2E",
+    pypi: "https://pypi.org/project/C2E/",
+  },
 ]
 
 export default function Projects() {
@@ -83,7 +98,23 @@ export default function Projects() {
         <div className="projects-grid stagger">
           {projects.map((p, i) => (
             <GlassCard key={p.name} className="project-card" style={{ "--i": i }}>
-              <h3 className="project-title">{p.name}</h3>
+
+              {p.status && (
+                <div className="project-status">
+                  <span className="project-status-dot" />
+                  {p.status}
+                </div>
+              )}
+
+              <div className="project-header">
+                <h3 className="project-title">{p.name}</h3>
+                {p.owner && (
+                  <span className="project-owner">
+                    {p.owner.toUpperCase()}
+                  </span>
+                )}
+              </div>
+
               <p className="project-desc">{p.description}</p>
 
               <div className="project-stack">
