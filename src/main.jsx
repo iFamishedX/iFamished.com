@@ -8,6 +8,7 @@ import "ifamished-ui/styles/themes/cold-blue/arc.css"
 
 // Site-specific background styles
 import "./styles/background.css"
+import "./styles/overrides.css"
 
 import App from "./App.jsx"
 

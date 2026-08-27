@@ -1,6 +1,19 @@
 import { GlassCard, GlassButton, usePageTitle } from "ifamished-ui"
 
 const projects = [
+    {
+    name: "HungerNet",
+    description:
+      "My ecosystem! The one-stop place for all of my work, alongside other developers'.",
+    stack: ["Minecraft", "Discord"],
+    features: [
+      "Secure /run, /log, /ping endpoints",
+      "Zero-noise, automation-focused design",
+      "Ideal for dashboards and remote control",
+    ],
+    status: "EVOLVING",
+    website: "https://hungernet.dev",
+  },
   {
     name: "HungerBridge",
     description:
